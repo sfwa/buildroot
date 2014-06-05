@@ -1,0 +1,9 @@
+config BR2_PACKAGE_LIBGPHOTO2
+	bool "libgphoto2"
+	select BR2_PACKAGE_LIBEXIF
+	select BR2_PACKAGE_LIBUSB
+	select BR2_PACKAGE_LIBTOOL
+	help
+	  Library for controlling digital cameras remotely.
+
+	  http://www.gphoto.org/proj/libgphoto2/

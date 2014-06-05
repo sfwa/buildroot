@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00121-g0bffde8 Configuration
+# Buildroot 2014.08-git-00122-g2cc3bc0-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -415,7 +415,7 @@ BR2_PACKAGE_BUSYBOX_CONFIG="package/busybox/busybox-1.20.x.config"
 # BR2_PACKAGE_GIT is not set
 # BR2_PACKAGE_GPERF is not set
 # BR2_PACKAGE_JQ is not set
-# BR2_PACKAGE_LIBTOOL is not set
+BR2_PACKAGE_LIBTOOL=y
 # BR2_PACKAGE_MAKE is not set
 # BR2_PACKAGE_PKGCONF is not set
 # BR2_PACKAGE_SSTRIP is not set
@@ -810,7 +810,7 @@ BR2_PACKAGE_PROVIDES_JPEG="jpeg-turbo"
 # BR2_PACKAGE_LIBART is not set
 # BR2_PACKAGE_LIBDMTX is not set
 # BR2_PACKAGE_LIBDRM is not set
-# BR2_PACKAGE_LIBEXIF is not set
+BR2_PACKAGE_LIBEXIF=y
 # BR2_PACKAGE_LIBGEOTIFF is not set
 BR2_PACKAGE_LIBPNG=y
 # BR2_PACKAGE_LIBQRENCODE is not set
@@ -892,6 +892,7 @@ BR2_PACKAGE_WEBKIT_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBFREEFARE is not set
 BR2_PACKAGE_LIBFTDI=y
 # BR2_PACKAGE_LIBTFDI_CPP is not set
+BR2_PACKAGE_LIBGPHOTO2=y
 # BR2_PACKAGE_LIBHID is not set
 # BR2_PACKAGE_LIBINPUT is not set
 # BR2_PACKAGE_LIBIQRF is not set
