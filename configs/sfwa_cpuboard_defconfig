@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00123-gd9bfd68-dirty Configuration
+# Buildroot 2014.08-git-00126-ga1238c9-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -890,6 +890,7 @@ BR2_PACKAGE_WEBKIT_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBAIO is not set
 # BR2_PACKAGE_LIBATASMART is not set
 # BR2_PACKAGE_LIBCEC is not set
+BR2_PACKAGE_LIBDC1394=y
 # BR2_PACKAGE_LIBFREEFARE is not set
 BR2_PACKAGE_LIBFTDI=y
 # BR2_PACKAGE_LIBTFDI_CPP is not set

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBDC1394
+	bool "libdc1394"
+	select BR2_PACKAGE_LIBUSB
+	help
+	  Library for controlling IIDC 1394-based cameras.
+
+	  http://damien.douxchamps.net/ieee1394/libdc1394/
