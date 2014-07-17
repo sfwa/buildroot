@@ -1,0 +1,7 @@
+config BR2_PACKAGE_FCSDUMP
+	bool "fcsdump"
+    select BR2_PACKAGE_LIBFTDI
+	help
+	  Small program to dump high-rate DSP telemetry to a file.
+
+	  https://github.com/sfwa/fcs/blob/master/cpu/fcsdump.c

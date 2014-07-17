@@ -4,7 +4,8 @@
 #
 ################################################################################
 
-LIBFTDI_VERSION = 0.19
+LIBFTDI_VERSION = 1.1
+LIBFTDI_SOURCE = libftdi1-$(LIBFTDI_VERSION).tar.bz2
 LIBFTDI_SITE = http://www.intra2net.com/en/developer/libftdi/download/
 LIBFTDI_DEPENDENCIES = libusb-compat libusb
 LIBFTDI_INSTALL_STAGING = YES
@@ -20,5 +21,4 @@ else
 LIBFDTI_CONF_OPT += --disable-libftdipp
 endif
 
-$(eval $(autotools-package))
-$(eval $(host-autotools-package))
+$(eval $(cmake-package))
