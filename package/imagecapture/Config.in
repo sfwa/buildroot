@@ -1,0 +1,8 @@
+config BR2_PACKAGE_IMAGECAPTURE
+	bool "imagecapture"
+	select BR2_PACKAGE_LIBUSB
+	help
+	  Periodically captures images from a Point Grey
+	  Chameleon camera and saves associated telemetry.
+
+	  https://github.com/sfwa/imagecapture
