@@ -1,0 +1,106 @@
+diff --git a/examples/stream_test.c b/examples/stream_test.c
+index 43abea9..ceafa09 100644
+--- a/examples/stream_test.c
++++ b/examples/stream_test.c
+@@ -185,7 +185,7 @@ int main(int argc, char **argv)
+        return EXIT_FAILURE;
+    }
+    
+-   if (ftdi_usb_open_desc(ftdi, 0x0403, 0x6010, descstring, NULL) < 0)
++   if (ftdi_usb_open_desc(ftdi, 0x0403, 0x6014, descstring, NULL) < 0)
+    {
+        fprintf(stderr,"Can't open ftdi device: %s\n",ftdi_get_error_string(ftdi));
+        ftdi_free(ftdi);
+@@ -213,7 +213,7 @@ int main(int argc, char **argv)
+        if (setvbuf(of, NULL, _IOFBF , 1<<16) == 0)
+            outputFile = of;
+    signal(SIGINT, sigintHandler);
+-   
++ 
+    err = ftdi_readstream(ftdi, readCallback, NULL, 8, 256);
+    if (err < 0 && !exitRequested)
+        exit(1);
+@@ -223,14 +223,14 @@ int main(int argc, char **argv)
+        outputFile = NULL;
+    }
+    fprintf(stderr, "Capture ended.\n");
+-   
++/*   
+    if (ftdi_set_bitmode(ftdi,  0xff, BITMODE_RESET) < 0)
+    {
+        fprintf(stderr,"Can't set synchronous fifo mode, Error %s\n",ftdi_get_error_string(ftdi));
+        ftdi_usb_close(ftdi);
+        ftdi_free(ftdi);
+        return EXIT_FAILURE;
+-   }
++   }*/
+    ftdi_usb_close(ftdi);
+    ftdi_free(ftdi);
+    signal(SIGINT, SIG_DFL);
+diff --git a/ftdi_eeprom/main.c b/ftdi_eeprom/main.c
+index 2592796..c2c0a9c 100644
+--- a/ftdi_eeprom/main.c
++++ b/ftdi_eeprom/main.c
+@@ -1,16 +1,17 @@
+ /***************************************************************************
+-                             main.c  -  description
++                             main.c - description
+                            -------------------
+-    begin                : Mon Apr  7 12:05:22 CEST 2003
+-    copyright            : (C) 2003-2014 by Intra2net AG and the libftdi developers
+-    email                : opensource@intra2net.com
++    begin : Mon Apr 7 12:05:22 CEST 2003
++    copyright : (C) 2003-2014 by Intra2net AG and the libftdi developers
++    email : opensource@intra2net.com
+  ***************************************************************************/
+ 
+ /***************************************************************************
+- *                                                                         *
+- *   This program is free software; you can redistribute it and/or modify  *
+- *   it under the terms of the GNU General Public License version 2 as     *
+- *   published by the Free Software Foundation.                            *
++ * *
++ * This program is free software; you can redistribute it and/or modify 
++*
++ * it under the terms of the GNU General Public License version 2 as *
++ * published by the Free Software Foundation.  *
+  *                                                                         *
+  ***************************************************************************/
+ 
+@@ -244,7 +245,7 @@ int main(int argc, char *argv[])
+ 
+     if (_read > 0)
+     {
+-        ftdi_eeprom_decode(ftdi, 0 /* debug: 1 */);
++        ftdi_eeprom_decode(ftdi, 1 /* debug: 1 */);
+ 
+         eeprom_buf = malloc(my_eeprom_size);
+         ftdi_get_eeprom_buf(ftdi, eeprom_buf, my_eeprom_size);
+diff --git a/src/ftdi_stream.c b/src/ftdi_stream.c
+index 2180672..7a8a016 100644
+--- a/src/ftdi_stream.c
++++ b/src/ftdi_stream.c
+@@ -162,12 +162,12 @@ ftdi_readstream(struct ftdi_context *ftdi,
+     }
+ 
+     /* We don't know in what state we are, switch to reset*/
+-    if (ftdi_set_bitmode(ftdi,  0xff, BITMODE_RESET) < 0)
++/*    if (ftdi_set_bitmode(ftdi,  0xff, BITMODE_RESET) < 0)
+     {
+         fprintf(stderr,"Can't reset mode\n");
+         return 1;
+     }
+-
++*/
+     /* Purge anything remaining in the buffers*/
+     if (ftdi_usb_purge_buffers(ftdi) < 0)
+     {
+@@ -220,7 +220,7 @@ ftdi_readstream(struct ftdi_context *ftdi,
+      * fetching data for several to several ten milliseconds
+      * and we skip blocks
+      */
+-    if (ftdi_set_bitmode(ftdi,  0xff, BITMODE_SYNCFF) < 0)
++    if (ftdi_set_bitmode(ftdi,  0xff, BITMODE_RESET) < 0)
+     {
+         fprintf(stderr,"Can't set synchronous fifo mode: %s\n",
+                 ftdi_get_error_string(ftdi));
