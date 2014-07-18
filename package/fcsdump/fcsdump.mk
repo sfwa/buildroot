@@ -16,11 +16,11 @@ endef
 define FCSDUMP_BUILD_CMDS
 	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_LDFLAGS) \
         -I$(STAGING_DIR)/usr/include/libftdi1 \
-		$(@D)/fcsdump.c -o $(@D)/fscdump -lftdi1
+		$(@D)/fcsdump.c -o $(@D)/fcsdump -lftdi1
 endef
 
-define FCSDUMP_INSTALL_CMDS
-	$(INSTALL) -D -m 755 $(@D)/fcsdump $(HOST_DIR)/usr/bin/fcsdump
+define FCSDUMP_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 755 $(@D)/fcsdump $(TARGET_DIR)/usr/bin/fcsdump
 endef
 
 $(eval $(generic-package))
