@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00130-g57f8081-dirty Configuration
+# Buildroot 2014.08-git-00132-g5cf7e1e Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -294,10 +294,10 @@ BR2_LINUX_KERNEL_CUSTOM_GIT=y
 BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://github.com/hardkernel/linux.git"
 BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="odroid-3.8.y"
 BR2_LINUX_KERNEL_VERSION="odroid-3.8.y"
-BR2_LINUX_KERNEL_PATCH=""
-BR2_LINUX_KERNEL_USE_DEFCONFIG=y
-# BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG is not set
-BR2_LINUX_KERNEL_DEFCONFIG="odroidx2"
+BR2_LINUX_KERNEL_PATCH="board/sfwa/sfwa-linux-3.8.patch"
+# BR2_LINUX_KERNEL_USE_DEFCONFIG is not set
+BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
+BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="board/sfwa/sfwa_cpuboard_linux_defconfig"
 # BR2_LINUX_KERNEL_UIMAGE is not set
 # BR2_LINUX_KERNEL_APPENDED_UIMAGE is not set
 BR2_LINUX_KERNEL_ZIMAGE=y
@@ -371,7 +371,7 @@ BR2_PACKAGE_BUSYBOX_CONFIG="package/busybox/busybox-1.20.x.config"
 #
 # Debugging, profiling and benchmark
 #
-# BR2_PACKAGE_BONNIE is not set
+BR2_PACKAGE_BONNIE=y
 # BR2_PACKAGE_CACHE_CALIBRATOR is not set
 # BR2_PACKAGE_DHRYSTONE is not set
 # BR2_PACKAGE_DMALLOC is not set
