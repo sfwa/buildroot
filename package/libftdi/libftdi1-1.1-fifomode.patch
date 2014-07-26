@@ -76,8 +76,23 @@ index 2592796..c2c0a9c 100644
  
          eeprom_buf = malloc(my_eeprom_size);
          ftdi_get_eeprom_buf(ftdi, eeprom_buf, my_eeprom_size);
+diff --git a/src/ftdi.c b/src/ftdi.c
+index ff26166..1722f38 100644
+--- a/src/ftdi.c
++++ b/src/ftdi.c
+@@ -90,8 +90,8 @@ int ftdi_init(struct ftdi_context *ftdi)
+     struct ftdi_eeprom* eeprom = (struct ftdi_eeprom *)malloc(sizeof(struct ftdi_eeprom));
+     ftdi->usb_ctx = NULL;
+     ftdi->usb_dev = NULL;
+-    ftdi->usb_read_timeout = 5000;
+-    ftdi->usb_write_timeout = 5000;
++    ftdi->usb_read_timeout = 100000;
++    ftdi->usb_write_timeout = 100000;
+ 
+     ftdi->type = TYPE_BM;    /* chip type */
+     ftdi->baudrate = -1;
 diff --git a/src/ftdi_stream.c b/src/ftdi_stream.c
-index 2180672..7a8a016 100644
+index 2180672..e6ffaf5 100644
 --- a/src/ftdi_stream.c
 +++ b/src/ftdi_stream.c
 @@ -162,12 +162,12 @@ ftdi_readstream(struct ftdi_context *ftdi,
@@ -95,7 +110,7 @@ index 2180672..7a8a016 100644
      /* Purge anything remaining in the buffers*/
      if (ftdi_usb_purge_buffers(ftdi) < 0)
      {
-@@ -220,7 +220,7 @@ ftdi_readstream(struct ftdi_context *ftdi,
+@@ -220,19 +220,13 @@ ftdi_readstream(struct ftdi_context *ftdi,
       * fetching data for several to several ten milliseconds
       * and we skip blocks
       */
@@ -104,3 +119,51 @@ index 2180672..7a8a016 100644
      {
          fprintf(stderr,"Can't set synchronous fifo mode: %s\n",
                  ftdi_get_error_string(ftdi));
+         goto cleanup;
+     }
+ 
+-    /*
+-     * Run the transfers, and periodically assess progress.
+-     */
+-
+-    gettimeofday(&state.progress.first.time, NULL);
+-
+     do
+     {
+         FTDIProgressInfo  *progress = &state.progress;
+@@ -252,35 +246,6 @@ ftdi_readstream(struct ftdi_context *ftdi,
+             state.result = 1;
+         else
+             state.activity = 0;
+-
+-        // If enough time has elapsed, update the progress
+-        gettimeofday(&now, NULL);
+-        if (TimevalDiff(&now, &progress->current.time) >= progressInterval)
+-        {
+-            progress->current.time = now;
+-            progress->totalTime = TimevalDiff(&progress->current.time,
+-                                              &progress->first.time);
+-
+-            if (progress->prev.totalBytes)
+-            {
+-                // We have enough information to calculate rates
+-
+-                double currentTime;
+-
+-                currentTime = TimevalDiff(&progress->current.time,
+-                                          &progress->prev.time);
+-
+-                progress->totalRate =
+-                    progress->current.totalBytes /progress->totalTime;
+-                progress->currentRate =
+-                    (progress->current.totalBytes -
+-                     progress->prev.totalBytes) / currentTime;
+-            }
+-
+-            state.callback(NULL, 0, progress, state.userdata);
+-            progress->prev = progress->current;
+-
+-        }
+     } while (!state.result);
+ 
+     /*
