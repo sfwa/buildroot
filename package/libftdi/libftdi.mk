@@ -9,7 +9,7 @@ LIBFTDI_SOURCE = libftdi1-$(LIBFTDI_VERSION).tar.bz2
 LIBFTDI_SITE = http://www.intra2net.com/en/developer/libftdi/download/
 LIBFTDI_DEPENDENCIES = libusb-compat libusb
 LIBFTDI_INSTALL_STAGING = YES
-LIBFTDI_CONFIG_SCRIPTS = libftdi-config
+LIBFTDI_CONFIG_SCRIPTS = libftdi1-config
 LIBFTDI_AUTORECONF = YES
 
 LIBFDTI_CONF_OPT = --without-examples
