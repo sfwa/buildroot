@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+
+udevadm settle
+fcsdump_wrapper.sh 1>/dev/null 2>&1 &
+imagecapture_wrapper.sh 1>/dev/null 2>&1 &
