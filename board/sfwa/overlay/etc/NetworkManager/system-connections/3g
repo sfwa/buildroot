@@ -1,0 +1,15 @@
+[connection]
+id=3g
+uuid=2d2e398c-0198-441c-bfca-e34c049daee2
+type=gsm
+
+[gsm]
+number=*99#
+apn=telstra.internet
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto
+
