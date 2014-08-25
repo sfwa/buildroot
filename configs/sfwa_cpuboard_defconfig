@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00137-g827977c Configuration
+# Buildroot 2014.08-git-00139-gf4f7403-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -1039,7 +1039,7 @@ BR2_PACKAGE_EXPAT=y
 # BR2_PACKAGE_LIBMICROHTTPD is not set
 # BR2_PACKAGE_LIBMNL is not set
 # BR2_PACKAGE_LIBMODBUS is not set
-# BR2_PACKAGE_LIBNDP is not set
+BR2_PACKAGE_LIBNDP=y
 # BR2_PACKAGE_LIBNETFILTER_ACCT is not set
 # BR2_PACKAGE_LIBNETFILTER_CONNTRACK is not set
 # BR2_PACKAGE_LIBNETFILTER_CTHELPER is not set
