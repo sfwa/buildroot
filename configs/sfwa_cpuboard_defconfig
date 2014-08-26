@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00145-g939fda0 Configuration
+# Buildroot 2014.08-git-00146-gbd351ad Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -1208,7 +1208,7 @@ BR2_PACKAGE_MOBILE_BROADBAND_PROVIDER_INFO=y
 # BR2_PACKAGE_AIRCRACK_NG is not set
 # BR2_PACKAGE_ARGUS is not set
 # BR2_PACKAGE_ARPTABLES is not set
-# BR2_PACKAGE_AUTOSSH is not set
+BR2_PACKAGE_AUTOSSH=y
 # BR2_PACKAGE_AVAHI is not set
 # BR2_PACKAGE_AXEL is not set
 # BR2_PACKAGE_BCUSDK is not set
