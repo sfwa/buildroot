@@ -1,0 +1,7 @@
+config BR2_PACKAGE_IMAGESCANNER
+	bool "imagescanner"
+	select BR2_PACKAGE_JPEG
+	help
+	  Scans images captured by imagecapture.
+
+	  https://github.com/sfwa/imagescanner

@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00148-g48164cc Configuration
+# Buildroot 2014.08-git-00150-g8d3422b-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -597,6 +597,7 @@ BR2_PACKAGE_GPHOTO2=y
 # BR2_PACKAGE_HWDATA is not set
 BR2_PACKAGE_I2C_TOOLS=y
 BR2_PACKAGE_IMAGECAPTURE=y
+BR2_PACKAGE_IMAGESCANNER=y
 # BR2_PACKAGE_INPUT_EVENT_DAEMON is not set
 # BR2_PACKAGE_INPUT_TOOLS is not set
 # BR2_PACKAGE_IOSTAT is not set
