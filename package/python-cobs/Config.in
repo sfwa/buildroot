@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYTHON_COBS
+	bool "python-cobs"
+	depends on BR2_PACKAGE_PYTHON
+	help
+	  Python functions for encoding and decoding COBS.
+
+	  https://pypi.python.org/pypi/cobs

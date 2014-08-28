@@ -1,6 +1,8 @@
 config BR2_PACKAGE_IMAGESCANNER
 	bool "imagescanner"
 	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_PYTHON_COBS
+	select BR2_PACKAGE_PYTHON_ENUM34
 	help
 	  Scans images captured by imagecapture.
 
