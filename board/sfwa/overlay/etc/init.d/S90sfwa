@@ -1,6 +1,10 @@
 #!/bin/sh
 #
 
+# Start telemetry and image capture scripts.
 udevadm settle
 fcsdump_wrapper.sh 1>/dev/null 2>&1 &
 imagecapture_wrapper.sh 1>/dev/null 2>&1 &
+
+# Start ssh relay.
+autossh -M 0 -f -N -R 22222:localhost:22 telemetry-relay.au.tono.my
