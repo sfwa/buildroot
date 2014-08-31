@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-IMAGESCANNER_VERSION = bc0a3b9ba2f035fcd940de0bc109e4a2f661c0cc
+IMAGESCANNER_VERSION = 681a2b5b3cea0c3d797618ee4b83080d55845153
 IMAGESCANNER_SITE = git://github.com/sfwa/imagescanner.git
 IMAGESCANNER_DEPENDENCIES = jpeg python
 
