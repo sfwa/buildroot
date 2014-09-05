@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00169-g5556dca-dirty Configuration
+# Buildroot 2014.08-git-00170-g22f5a37 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -283,7 +283,7 @@ BR2_LINUX_KERNEL=y
 BR2_LINUX_KERNEL_CUSTOM_GIT=y
 # BR2_LINUX_KERNEL_CUSTOM_HG is not set
 # BR2_LINUX_KERNEL_CUSTOM_LOCAL is not set
-BR2_LINUX_KERNEL_CUSTOM_REPO_URL="git@github.com:beagleboard/linux.git"
+BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://github.com/beagleboard/linux.git"
 BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="3.8.13-bone64"
 BR2_LINUX_KERNEL_VERSION="3.8.13-bone64"
 BR2_LINUX_KERNEL_PATCH=""
