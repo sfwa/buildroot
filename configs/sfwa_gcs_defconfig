@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00171-ge665565-dirty Configuration
+# Buildroot 2014.08-git-00172-gb688dbe-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -286,7 +286,7 @@ BR2_LINUX_KERNEL_CUSTOM_GIT=y
 BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://github.com/beagleboard/linux.git"
 BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="3.8.13-bone64"
 BR2_LINUX_KERNEL_VERSION="3.8.13-bone64"
-BR2_LINUX_KERNEL_PATCH=""
+BR2_LINUX_KERNEL_PATCH="board/sfwa/gcs/sfwa-linux-gcs-3.8.patch"
 # BR2_LINUX_KERNEL_USE_DEFCONFIG is not set
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
 BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="board/sfwa/gcs/sfwa_gcs_linux_defconfig"

@@ -1,0 +1,13 @@
+[connection]
+id=ethernet
+uuid=ce81bd28-a1e3-47aa-bc34-cdebce07f249
+interface-name=eth0
+type=ethernet
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=manual
+address1=192.168.10.2/24
+
