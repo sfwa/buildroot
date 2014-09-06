@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00172-gb688dbe-dirty Configuration
+# Buildroot 2014.08-git-00173-g751890a-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -300,7 +300,7 @@ BR2_LINUX_KERNEL_DTS_SUPPORT=y
 # BR2_LINUX_KERNEL_USE_INTREE_DTS is not set
 BR2_LINUX_KERNEL_USE_CUSTOM_DTS=y
 BR2_LINUX_KERNEL_CUSTOM_DTS_PATH="board/sfwa/gcs/am335x-boneblack.dts"
-# BR2_LINUX_KERNEL_INSTALL_TARGET is not set
+BR2_LINUX_KERNEL_INSTALL_TARGET=y
 
 #
 # Linux Kernel Extensions
