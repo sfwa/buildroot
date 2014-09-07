@@ -24,3 +24,8 @@
 #/usr/X11R6/bin/Xfbdev		     	f	4755	0	0	-	-	-	-	-
 # Overlay files which need special permissions
 /etc/NetworkManager/system-connections/3g	f	600	0	0	-	-	-	-	-
+/root/.ssh					d	700	0	0	-	-	-	-	-
+/root/.ssh/authorized_keys	f	600	0	0	-	-	-	-	-
+/root/.ssh/config			f	600	0	0	-	-	-	-	-
+/root/.ssh/id_rsa			f	600	0	0	-	-	-	-	-
+/root/.ssh/id_rsa.pub		f	600	0	0	-	-	-	-	-
