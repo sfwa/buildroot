@@ -1,0 +1,11 @@
+[connection]
+id=4g
+uuid=30ab4df2-4cee-4c32-ac4b-8ca4fb0832e5
+interface-name=usb0
+type=ethernet
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

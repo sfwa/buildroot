@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-GCS_VERSION = 81d5f85ef4ca6c93234f83be153c9a0191d4984b
+GCS_VERSION = 2409beb4c7273fd9c7276f9e059c002135b66707
 GCS_SITE = git://github.com/sfwa/gcs.git
 GCS_SETUP_TYPE = setuptools
 
