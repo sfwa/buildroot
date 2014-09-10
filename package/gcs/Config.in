@@ -1,0 +1,9 @@
+config BR2_PACKAGE_GCS
+	bool "gcs"
+	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_PYTHON_COBS
+	select BR2_PACKAGE_PYTHON_ENUM34
+	help
+	  SFWA GCS software.
+
+	  https://github.com/sfwa/gcs

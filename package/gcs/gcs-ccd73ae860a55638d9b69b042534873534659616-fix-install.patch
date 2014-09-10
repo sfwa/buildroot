@@ -1,0 +1,13 @@
+diff --git a/setup.py b/setup.py
+index 40fc8e9..8c0ad08 100644
+--- a/setup.py
++++ b/setup.py
+@@ -3,7 +3,7 @@ from setuptools import setup
+ setup(
+     name='uav',
+     version='1.0dev1',
+-    packages=['gcs', 'gcs.radio', 'gcs.plog', 'gcs.vectors', 'gcs.mission'],
++    packages=['gcs'],
+     scripts=['bin/gcs-server'],
+     package_data={
+         'gcs': [

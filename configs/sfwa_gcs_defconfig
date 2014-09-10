@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-00173-g751890a-dirty Configuration
+# Buildroot 2014.08-git-00176-gd322e6f-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -1134,6 +1134,7 @@ BR2_PACKAGE_READLINE=y
 # BR2_PACKAGE_BC is not set
 # BR2_PACKAGE_COLLECTD is not set
 # BR2_PACKAGE_EMPTY is not set
+BR2_PACKAGE_GCS=y
 # BR2_PACKAGE_GOOGLEFONTDIRECTORY is not set
 # BR2_PACKAGE_HAVEGED is not set
 # BR2_PACKAGE_MCRYPT is not set
