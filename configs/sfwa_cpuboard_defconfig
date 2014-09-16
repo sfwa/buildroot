@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2014.08-git-g2f79115 Configuration
+# Buildroot 2014.08-git-g9b5ed1a Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 
@@ -819,7 +819,7 @@ BR2_PACKAGE_OPENSSL=y
 #
 # BR2_PACKAGE_GAMIN is not set
 # BR2_PACKAGE_LIBCONFIG is not set
-# BR2_PACKAGE_LIBCONFUSE is not set
+BR2_PACKAGE_LIBCONFUSE=y
 # BR2_PACKAGE_LIBFUSE is not set
 # BR2_PACKAGE_LIBLOCKFILE is not set
 # BR2_PACKAGE_LIBNFS is not set
