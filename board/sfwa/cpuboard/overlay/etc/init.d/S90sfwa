@@ -7,7 +7,7 @@ fcsdump_wrapper.sh 1>/dev/null 2>&1 &
 imagecapture_wrapper.sh 1>/dev/null 2>&1 &
 
 # Start image scanner process.
-python /root/imagescanner/scanner.py /mnt/sdcard/log /mnt/sdcard/processed telemetry-relay.au.tono.my /dev/ttySAC0 1>/dev/null 2>&1 &
+python /root/imagescanner/scanner.py /mnt/sdcard/log /mnt/sdcard/processed 54.206.112.214 /dev/ttySAC0 1>/dev/null 2>&1 &
 
 # Start ssh relay.
 autossh -M 0 -f -N -R 22222:localhost:22 telemetry-relay.au.tono.my
